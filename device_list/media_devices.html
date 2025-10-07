@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Browser Capabilities</title>
+    <script src="./media_devices.js"></script>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-flow: row wrap;
+            background-color: #f1f1f1;
+        }
+
+        .flex-container>fieldset {
+            margin: 10px;
+            text-align: left;
+            font-size: 14px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body style="background-color: #f1f1f1; margin: 0px;">
+
+    <div id="deviceList" class="flex-container">
+        <fieldset>
+            <legend><b>Device 01</b></legend>
+        </fieldset>
+        <fieldset>
+            <legend><b>Device 02</b></legend>
+        </fieldset>
+        <fieldset>
+            <legend><b>Device 03</b></legend>
+        </fieldset>
+    </div>
+
+    <script>
+        getAllDeviceInfo();
+    </script>
+
+</body>
+
+</html>

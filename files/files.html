@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Browser Capabilities</title>
+    <script src="./files.js"></script>
+    <style>
+        .output {
+            overflow: scroll;
+            margin: 1rem 0;
+            height: 200px;
+        }
+
+        #dropzone {
+            text-align: center;
+            width: 300px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            border: 4px dashed red;
+            border-radius: 10px;
+        }
+
+        #boxtitle {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            color: black;
+            font:
+                bold 2em "Arial",
+                sans-serif;
+            width: 300px;
+            height: 100px;
+        }
+
+        body {
+            font:
+                14px "Arial",
+                sans-serif;
+            margin: 0px;
+            background-color: f1f1f1;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-flow: row wrap;
+            background-color: #f1f1f1;
+        }
+
+        .flex-container>fieldset {
+            margin: 10px;
+            text-align: left;
+            font-size: 14px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <fieldset style="width: 500px;">
+            <legend>File API</legend>
+            <input type="file" id="userFiles" multiple />
+            <div class="output"></div>
+        </fieldset>
+
+        <fieldset style="width: 500px;">
+            <legend>File and Directory Entries API</legend>
+            <p>Drag files and/or directories to the box below!</p>
+
+            <div id="dropzone">
+                <div id="boxtitle">Drop Files Here</div>
+            </div>
+
+            <h2>Directory tree:</h2>
+
+            <ul id="listing"></ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>File: webkitRelativePath</legend>
+            <input type="file" id="file-picker" name="fileList" webkitdirectory multiple />
+            <output id="output"></output>            
+        </fieldset>
+    </div>
+    <script>
+        initPage();
+    </script>
+</body>
+
+</html>
